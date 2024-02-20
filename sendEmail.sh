@@ -1,9 +1,14 @@
 #!/bin/bash
 
 sendemail() {
-    local subject="Test Email"
-    local body="This is a test email"
-    local recipient="githuba9520@gmail.com"
+    # subject="Test Email"
+    # body="This is a test email"
+    recipient="githuba9520@gmail.com"
+
+    echo "What is the subject of your Email?"
+    read subject
+    echo "What is the body of your Email?"
+    read body
 
     echo -e "Subject: $subject\n$body" | ssmtp $recipient
 }
